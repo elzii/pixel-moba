@@ -1,0 +1,26 @@
+{
+  "name": "normal",
+  "description": "This is a classic 5 vs. 5 map based on the original Dota map",
+  "author": "tcarlsen",
+  "map": {
+    "size": [4000, 4000],
+    "background": {
+      "name": "grass",
+      "image": "images/grass.png"
+    },
+    "terrain": [
+      {
+        "name": "rock",
+        "image": "images/rock.png"
+      },
+      {
+        "name": "tree",
+        "image": "images/tree.png"
+      },
+      {
+        "name": "water",
+        "image": "images/water.png"
+      }
+    ]
+  }
+}

@@ -1,10 +1,8 @@
 doctype html
 html
   head
-    title Hello World!  
+    title Pixel MOBA
+    link(rel="stylesheet", href="styles/main.css")
   body
-    h1 Hello World!
-    | We are using node.js 
-    script document.write(process.version)
-    | and atom-shell 
-    script document.write(process.versions['atom-shell'])
+    script(src="bower_components/phaser/build/phaser.js")
+    script(src="scripts/game.js")

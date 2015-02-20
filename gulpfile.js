@@ -35,11 +35,17 @@ gulp.task('maps', function () {
     .pipe(gulp.dest('app/maps'));
 });
 
+gulp.task('heroes', function () {
+  return gulp.src('src/heroes/**')
+    .pipe(plumber())
+    .pipe(gulp.dest('app/heroes'));
+});
+
 gulp.task('watch', function () {
   gulp.watch('src/**/*.coffee', ['coffee']);
   gulp.watch('src/**/*.scss', ['sass']);
   gulp.watch('src/*.jade', ['jade']);
 });
 
-gulp.task('default', ['coffee', 'jade', 'sass', 'maps', 'watch']);
+gulp.task('default', ['coffee', 'jade', 'sass', 'maps', 'heroes', 'watch']);
 gulp.task('build', ['coffee', 'jade', 'sass']);

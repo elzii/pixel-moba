@@ -1,0 +1,26 @@
+{
+  "name": "Armless",
+  "description": "Just a test hero stolen from medevenx",
+  "author": "tcarlsen",
+  "skins": {
+    "default": {
+      "spritesheet": "skins/default.png",
+      "width": 42,
+      "height": 67,
+      "frameCount": 10,
+      "animations": {
+        "idle": {
+          "frames": [0, 1, 2, 3],
+          "frameRate": 10
+        },
+        "moving": {
+          "frames": [4, 5, 6, 7, 8, 9],
+          "frameRate": 10
+        }
+      }
+    }
+  },
+  "base": {
+    "movement_speed": 100
+  }
+}

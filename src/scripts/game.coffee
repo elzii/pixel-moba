@@ -1,6 +1,7 @@
 map = require "./maps/normal/config.json"
 hero = require "./heroes/armless/config.json"
 skin = hero.skins.default
+startPosition = [60, (map.map.size[1] - skin.height - 60)]
 cursors = undefined
 tween = undefined
 heroObject = undefined
@@ -48,12 +49,13 @@ moveHero = (pointer) ->
 
 create = ->
   #  Modify the world and camera bounds
-  game.world.setBounds -(map.map.size[0] / 2), -(map.map.size[1] / 2), (map.map.size[0] / 2), (map.map.size[1] / 2)
-  game.add.tileSprite -(map.map.size[0] / 2), -(map.map.size[1] / 2), (map.map.size[0] / 2), (map.map.size[1] / 2), "background"
-  game.input.mousePointer.x = 400
-  game.input.mousePointer.y = 300
+  game.world.setBounds 0, 0, map.map.size[0], map.map.size[1]
+  game.add.tileSprite 0, 0, map.map.size[0], map.map.size[1], "background"
+  game.camera.y = map.map.size[1] - 600
+  game.input.mousePointer.x = startPosition[0]
+  game.input.mousePointer.y = startPosition[1]
 
-  heroObject = game.add.sprite (-800 + 400), (-600 + 300), "hero"
+  heroObject = game.add.sprite startPosition[0], startPosition[1], "hero"
 
   heroObject.animations.add "idle", skin.animations.idle.frames, skin.animations.idle.frameRate, true
   heroObject.animations.add "move", skin.animations.moving.frames, skin.animations.moving.frameRate, true

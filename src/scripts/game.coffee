@@ -111,7 +111,7 @@ update = ->
 render = ->
   game.debug.cameraInfo game.camera, 32, 32
 
-game = new (Phaser.Game)(800, 600, Phaser.CANVAS, "phaser-example",
+game = new (Phaser.Game)(800, 600, Phaser.WEBGL, "phaser-example",
   preload: preload
   create: create
   update: update

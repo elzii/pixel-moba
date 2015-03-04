@@ -45,6 +45,8 @@ gulp.task('watch', function () {
   gulp.watch('src/**/*.coffee', ['coffee']);
   gulp.watch('src/**/*.scss', ['sass']);
   gulp.watch('src/*.jade', ['jade']);
+  gulp.watch('src/maps/**', ['maps']);
+  gulp.watch('src/heroes/**', ['heroes']);
 });
 
 gulp.task('default', ['coffee', 'jade', 'sass', 'maps', 'heroes', 'watch']);

@@ -1,6 +1,8 @@
-# Pixel MOBA
+# Pixel MOBA :video_game:
 
 Pixel MOBA is a open source MOBA game built on top of the [atom-shell](https://github.com/atom/atom-shell).
+
+**OBS! is is not close to a working real game yet, so dont exsepct to be able to play it :smirk:**
 
 ## Installation
 

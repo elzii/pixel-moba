@@ -1,25 +1,131 @@
 {
   "name": "normal",
-  "description": "This is a classic 5 vs. 5 map based on the original Dota map",
+  "description": "This is a classic 3 laned MOBA map",
   "author": "tcarlsen",
   "map": {
     "size": [4000, 4000],
-    "background": {
-      "name": "grass",
-      "image": "images/grass.png"
-    },
     "terrain": [
       {
-        "name": "rock",
-        "image": "images/rock.png"
+        "name": "grass",
+        "image": "images/grass.png",
+        "width": 32,
+        "height": 32,
+        "obstacle": false
       },
       {
-        "name": "tree",
-        "image": "images/tree.png"
+        "name": "path",
+        "image": "images/path.png",
+        "width": 32,
+        "height": 32,
+        "obstacle": false
       },
       {
-        "name": "water",
-        "image": "images/water.png"
+        "name": "basebl",
+        "image": "images/basebl.png",
+        "width": 993,
+        "height": 992,
+        "obstacle": false
+      },
+      {
+        "name": "basetr",
+        "image": "images/basetr.png",
+        "width": 993,
+        "height": 992,
+        "obstacle": false
+      }
+    ],
+    "layout": [
+      {
+        "comment": "background",
+        "terrain": "grass",
+        "type": "area",
+        "x": 0,
+        "y": 0,
+        "width": 4000,
+        "height": 4000
+      },
+      {
+        "comment": "bottom bottom lane",
+        "terrain": "path",
+        "type": "area",
+        "x": 0,
+        "y": 3700,
+        "width": 3500,
+        "height": 280
+      },
+      {
+        "comment": "bottom right lane",
+        "terrain": "path",
+        "type": "area",
+        "x": 3700,
+        "y": 0,
+        "width": 280,
+        "height": 3500
+      },
+      {
+        "comment": "bottom center lane",
+        "terrain": "path",
+        "type": "area",
+        "x": 3500,
+        "y": 3500,
+        "width": 480,
+        "height": 480
+      },
+      {
+        "comment": "top right lane",
+        "terrain": "path",
+        "type": "area",
+        "x": 500,
+        "y": 20,
+        "width": 3500,
+        "height": 280
+      },
+      {
+        "comment": "top left lane",
+        "terrain": "path",
+        "type": "area",
+        "x": 20,
+        "y": 500,
+        "width": 280,
+        "height": 3500
+      },
+      {
+        "comment": "top center lane",
+        "terrain": "path",
+        "type": "area",
+        "x": 20,
+        "y": 20,
+        "width": 480,
+        "height": 480
+      },
+      {
+        "comment": "middle lane",
+        "terrain": "path",
+        "type": "area",
+        "extra": [
+          {
+            "type": "angle",
+            "degrees": -45
+          }
+        ],
+        "x": 140,
+        "y": 3650,
+        "width": 5600,
+        "height": 280
+      },
+      {
+        "comment": "base bottom left",
+        "terrain": "basebl",
+        "type": "spot",
+        "x": 0,
+        "y": 3008
+      },
+      {
+        "comment": "base top right",
+        "terrain": "basetr",
+        "type": "spot",
+        "x": 3008,
+        "y": 0
       }
     ]
   }

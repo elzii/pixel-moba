@@ -54,6 +54,33 @@ create = ->
   game.input.mousePointer.x = startPosition[0]
   game.input.mousePointer.y = startPosition[1]
 
+  for layout in map.map.layout
+    sprite = null
+
+    # what type of layout are we talking here?
+    if layout.type is "line"
+      i = layout.start
+
+      while i <= layout.end
+        if layout.direction is "y"
+          sprite = game.add.sprite layout.static, i, layout.terrain
+        else if layout.direction is "x"
+          sprite = game.add.sprite i, layout.static, layout.terrain
+
+        i += layout.margin
+    else if layout.type is "area"
+      sprite = game.add.tileSprite layout.x, layout.y, layout.width, layout.height, layout.terrain
+    else if layout.type is "spot"
+      sprite = game.add.sprite layout.x, layout.y, layout.terrain
+
+    # lets see if there are more to do
+    if layout.extra
+      for extra in layout.extra
+        if extra.type is "angle"
+
+          sprite.angle = extra.degrees
+
+
   heroObject = game.add.sprite startPosition[0], startPosition[1], "hero"
 
   heroObject.animations.add "idle", skin.animations.idle.frames, skin.animations.idle.frameRate, true
@@ -62,11 +89,6 @@ create = ->
 
   game.input.onDown.add moveHero, this
 
-  i = 0
-  while i < 100
-    game.add.sprite game.world.randomX, game.world.randomY, "tree"
-    game.add.sprite game.world.randomX, game.world.randomY, "rock"
-    i++
 
   cursors = game.input.keyboard.createCursorKeys()
 

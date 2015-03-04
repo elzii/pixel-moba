@@ -7,7 +7,6 @@ tween = undefined
 heroObject = undefined
 
 preload = ->
-  game.load.image "background", "maps/normal/#{map.map.background.image}"
   game.load.spritesheet "hero", "heroes/armless/#{skin.spritesheet}", skin.width, skin.height, skin.frameCount
 
   for terrain in map.map.terrain
@@ -74,15 +73,17 @@ create = ->
 update = ->
   x = game.input.mousePointer.x
   y = game.input.mousePointer.y
+  gameWidth = game.camera.game.width
+  gameHeight = game.camera.game.height
 
   if game.input.activePointer.withinGame
     if cursors.up.isDown or y < 50
       game.camera.y -= 4
-    else if cursors.down.isDown or y > 550
+    else if cursors.down.isDown or y > (gameHeight - 50)
       game.camera.y += 4
     if cursors.left.isDown or x < 50
       game.camera.x -= 4
-    else if cursors.right.isDown or x > 750
+    else if cursors.right.isDown or x > (gameWidth - 50)
       game.camera.x += 4
 
 render = ->

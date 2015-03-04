@@ -50,4 +50,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['coffee', 'jade', 'sass', 'maps', 'heroes', 'watch']);
-gulp.task('build', ['coffee', 'jade', 'sass']);
+gulp.task('build', ['coffee', 'jade', 'sass', 'maps', 'heroes']);

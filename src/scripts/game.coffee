@@ -76,9 +76,10 @@ create = ->
     if layout.extra
       for extra in layout.extra
         if extra.type is "angle"
-
           sprite.angle = extra.degrees
-
+        else if extra.type is "animate"
+          sprite.animations.add "ani", extra.frames, extra.frameRate, extra.loop
+          sprite.animations.play "ani"
 
   heroObject = game.add.sprite startPosition[0], startPosition[1], "hero"
 

@@ -20,6 +20,14 @@
         "obstacle": false
       },
       {
+        "name": "water",
+        "image": "images/water.png",
+        "width": 32,
+        "height": 32,
+        "frameCount": 3,
+        "obstacle": false
+      },
+      {
         "name": "basebl",
         "image": "images/basebl.png",
         "width": 993,
@@ -43,6 +51,27 @@
         "y": 0,
         "width": 4000,
         "height": 4000
+      },
+      {
+        "comment": "cros water",
+        "terrain": "water",
+        "type": "area",
+        "x": 350,
+        "y": 0,
+        "width": 5155,
+        "height": 500,
+        "extra": [
+          {
+            "type": "angle",
+            "degrees": 45
+          },
+          {
+            "type": "animate",
+            "frames": [0, 1, 2],
+            "frameRate": 2,
+            "loop": true
+          }
+        ]
       },
       {
         "comment": "bottom bottom lane",

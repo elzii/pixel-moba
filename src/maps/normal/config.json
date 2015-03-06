@@ -125,16 +125,16 @@
         "comment": "middle lane",
         "terrain": "path",
         "type": "area",
+        "x": 0,
+        "y": 3802,
+        "width": 5155,
+        "height": 280,
         "extra": [
           {
             "type": "angle",
             "degrees": -45
           }
-        ],
-        "x": 140,
-        "y": 3650,
-        "width": 5600,
-        "height": 280
+        ]
       },
       {
         "comment": "base bottom left",

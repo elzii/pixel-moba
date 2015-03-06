@@ -10,7 +10,12 @@ preload = ->
   game.load.spritesheet "hero", "heroes/armless/#{skin.spritesheet}", skin.width, skin.height, skin.frameCount
 
   for terrain in map.map.terrain
-    game.load.image terrain.name, "maps/normal/#{terrain.image}"
+    spritePath = "maps/normal/"
+
+    if terrain.frameCount
+      game.load.spritesheet terrain.name, (spritePath + terrain.image), terrain.width, terrain.height, terrain.frameCount
+    else
+      game.load.image terrain.name, (spritePath + terrain.image)
 
 # game.physics.arcade.distanceToPointer( is broking atm
 distanceToPointer = (displayObject, pointer) ->

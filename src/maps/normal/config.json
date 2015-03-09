@@ -95,6 +95,21 @@
         "height": 480
       },
       {
+        "comment": "bottom center lane 2",
+        "terrain": "path",
+        "type": "area",
+        "x": 3700,
+        "y": 3290,
+        "width": 210,
+        "height": 580,
+        "extra": [
+          {
+            "type": "angle",
+            "degrees": 45
+          }
+        ]
+      },
+      {
         "comment": "top right lane",
         "terrain": "path",
         "type": "area",
@@ -120,6 +135,21 @@
         "y": 20,
         "width": 480,
         "height": 480
+      },
+      {
+        "comment": "top center lane 2",
+        "terrain": "path",
+        "type": "area",
+        "x": 560,
+        "y": 150,
+        "width": 210,
+        "height": 580,
+        "extra": [
+          {
+            "type": "angle",
+            "degrees": 45
+          }
+        ]
       },
       {
         "comment": "middle lane",

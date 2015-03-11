@@ -54,6 +54,7 @@ moveHero = (pointer) ->
 create = ->
   #  Modify the world and camera bounds
   game.world.setBounds 0, 0, map.map.size[0], map.map.size[1]
+  game.scale.scaleMode = Phaser.ScaleManager.RESIZE
   game.camera.x = 0
   game.camera.y = 4000
   game.input.mousePointer.x = startPosition[0]
